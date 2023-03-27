@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins" , sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+
+} 
+
+/* header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background-color: #4fb0ff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 8%;
+    height: 50px;
+} */
+
+.navbar{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    width: 200px;
+    z-index: 1;
+    background-color: #4fb0ff;
+}
+
+.navbar_content{
+    height: 90%;
+}
+
+.navbar_content a{
+    color:yellow;
+    text-decoration: none;
+    width: 100%;
+    font-size: 25px;
+}
+
+.navbar_content .logo {
+    position: relative;
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+}
+
+.navbar_content a .logo:hover,
+ .navbar_content .clientPart a:hover,
+ .navbar_content .dashboard_btn:hover,
+ .navbar .logout_btn:hover{
+    background-color: #4188c2;
+    cursor: pointer;
+}
+
+.navbar_content a .logo span {
+    color: #000;
+}
+
+.navbar_content .profile_part,
+ .navbar_content .clientPart, 
+ .navbar_content .artistPart{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.navbar_content .profile_part img{
+    padding: 0 8px;
+    border-radius: 50%;
+    width: 45%;
+    height: 25%;
+}
+
+.title{
+    margin-bottom: 10px;
+    font-size: 1.4em;
+    color: #fff;
+}
+
+.navbar_content .profile_part .username{
+    font-size: 1.1em;
+    color : #ffff00
+}
+
+.navbar_content .profile_part .email{
+    font-size: 0.5em;
+    color: #e5e3e3;
+}
+
+.navbar_content .dashboard_btn{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar_content .dashboard_btn span, 
+.navbar_content .artistPart .realisation_title{
+    font-size: 15px;
+}
+
+.navbar_content .artistPart .realisation_title{
+    color : #ffff00
+}
+
+.navbar_content .artistPart .realisation_field{
+    font-size: 13px;
+}
+
+.navbar_content .artistPart .realisation_field li{
+    color: #e5e3e3;
+    margin-left: 20px;
+}
+
+.navbar_content .artistPart .realisation_field li a{
+    color: #e5e3e3;
+    font-size: 13px;
+    width: 100%;
+    text-decoration: none;
+}
+
+.navbar .logout_btn{
+    width: 90%;
+    border: 1px #fff solid;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.navbar .logout_btn a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
