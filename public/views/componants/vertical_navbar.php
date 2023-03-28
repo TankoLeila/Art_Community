@@ -35,8 +35,8 @@
                     <span class="realisation_title">Realisation</span>
                     <div class="realisation_field">
                         <ul>
-                            <li><a href="#realisation_list">List</a></li>
-                            <li><a href="../artists/create.php">Create</a></li>
+                            <li><a href="../artists/realisation/list.php">List</a></li>
+                            <li><a href="../artists/realisation/create.php">Create</a></li>
                         </ul>
                     </div>
                     <a href="#dashboard_artist">
