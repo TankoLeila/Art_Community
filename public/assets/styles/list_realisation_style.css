@@ -1,0 +1,7 @@
+.container{
+    position: fixed;
+    display: flex;
+    margin-left: 200px;
+    width: 84%;
+    background-color: #999;
+}
