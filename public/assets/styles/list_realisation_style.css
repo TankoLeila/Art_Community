@@ -1,7 +1,32 @@
 .container{
-    position: fixed;
+    position: relative;
     display: flex;
     margin-left: 200px;
     width: 84%;
-    background-color: #999;
+    background-color: #b44949;
+}
+
+.container .grid-container{
+    position: relative;
+    width: 100%;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 40px 40px 40px;
+}
+
+.container .grid-container .item-grid-container{
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 30%;
+    height: 50px;
+}
+
+.container .grid-container .item-grid-container .image-area{
+    grid-column: 1 / span 2;
+}
+
+.container .grid-container .item-grid-container .image-area img{
+    width: 10px;
+    height: 10px;
 }
