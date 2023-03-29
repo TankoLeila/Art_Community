@@ -1,25 +1,31 @@
+body{ 
+    overflow-x: hidden;
+}
+
 .container{
     position: relative;
     display: flex;
     margin-left: 200px;
     width: 84%;
-    background-color: #b44949;
 }
 
 .container .grid-container{
     position: relative;
     width: 100%;
-    margin: 20px;
     display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: 40px 40px 40px;
+    grid-template-columns: 30% 30% 30%;
+    gap: 20px;
+    justify-content: center;
+    padding: 15px 0;
 }
 
 .container .grid-container .item-grid-container{
     display: grid;
     grid-template-columns: auto auto;
-    width: 30%;
-    height: 50px;
+    background-color: #ffff005d;
+    justify-content: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
 }
 
 .container .grid-container .item-grid-container .image-area{
@@ -27,6 +33,37 @@
 }
 
 .container .grid-container .item-grid-container .image-area img{
-    width: 10px;
-    height: 10px;
+    width: 100%;
+    height: 100%;
+    border-start-start-radius: 15px;
+    border-start-end-radius: 15px;
+}
+
+.container .grid-container .item-grid-container .date-area,
+.container .grid-container .item-grid-container .update-btn-area{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.container .grid-container .item-grid-container .date-area{
+    padding: 5px;
+}
+
+.container .grid-container .item-grid-container .update-btn-area button{
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-bottom-right-radius: 15px;
+    background-color: #4fb0ff;
+}
+
+.container .grid-container .item-grid-container .update-btn-area button:hover{
+    background-color: #4188c2;
+}
+
+.container .grid-container .item-grid-container .update-btn-area button a{
+    text-decoration: none;
+    color: #fff;
 }

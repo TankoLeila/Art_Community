@@ -54,7 +54,107 @@
     </div>
 
     <div class="container">
+        <div class="grid-container">
 
+            <div class="item-grid-container">
+
+                <div class="image-area">
+                    <img src="../../../assets/images/chinoise.jpg" alt="realisation image">
+                </div>
+                <div class="date-area">
+                    <span>enregistrée le 31/10/2022</span>
+                </div>
+                <div class="update-btn-area">
+                    <button><a href="#update">Update</a></button>
+                </div>
+
+            </div>
+
+            <div class="item-grid-container">
+
+                <div class="image-area">
+                    <img src="../../../assets/images/chinoise.jpg" alt="realisation image">
+                </div>
+                <div class="date-area">
+                    enregistrée le 31/10/2022
+                </div>
+                <div class="update-btn-area">
+                    <button><a href="#update">Update</a></button>
+                </div>
+
+            </div>
+
+            <div class="item-grid-container">
+
+                <div class="image-area">
+                    <img src="../../../assets/images/chinoise.jpg" alt="realisation image">
+                </div>
+                <div class="date-area">
+                    enregistrée le 31/10/2022
+                </div>
+                <div class="update-btn-area">
+                    <button><a href="#update">Update</a></button>
+                </div>
+
+            </div>
+
+            <div class="item-grid-container">
+
+                <div class="image-area">
+                    <img src="../../../assets/images/chinoise.jpg" alt="realisation image">
+                </div>
+                <div class="date-area">
+                    enregistrée le 31/10/2022
+                </div>
+                <div class="update-btn-area">
+                    <button><a href="#update">Update</a></button>
+                </div>
+
+            </div>
+
+            <div class="item-grid-container">
+
+                <div class="image-area">
+                    <img src="../../../assets/images/chinoise.jpg" alt="realisation image">
+                </div>
+                <div class="date-area">
+                    enregistrée le 31/10/2022
+                </div>
+                <div class="update-btn-area">
+                    <button><a href="#update">Update</a></button>
+                </div>
+
+            </div>
+
+            <div class="item-grid-container">
+
+                <div class="image-area">
+                    <img src="../../../assets/images/chinoise.jpg" alt="realisation image">
+                </div>
+                <div class="date-area">
+                    enregistrée le 31/10/2022
+                </div>
+                <div class="update-btn-area">
+                    <button><a href="#update">Update</a></button>
+                </div>
+
+            </div>
+
+            <div class="item-grid-container">
+
+                <div class="image-area">
+                    <img src="../../../assets/images/chinoise.jpg" alt="realisation image">
+                </div>
+                <div class="date-area">
+                    enregistrée le 31/10/2022
+                </div>
+                <div class="update-btn-area">
+                    <button><a href="#update">Update</a></button>
+                </div>
+
+            </div>
+
+        </div>
     </div>
 </body>
 </html>
