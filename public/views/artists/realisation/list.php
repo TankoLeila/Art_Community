@@ -9,7 +9,8 @@
     <title>List of realisations</title>
 </head>
 <body>
-<div class="navbar">
+
+    <div class="navbar">
         <div class="navbar_content">
             <a href="../../index.html"> 
                 <div class="logo">   
@@ -54,6 +55,11 @@
     </div>
 
     <div class="container">
+
+        <?php
+            include "../../../../private/database/access_db.php"
+        ?>
+        
         <div class="grid-container">
 
             <div class="item-grid-container">
@@ -73,10 +79,52 @@
             <div class="item-grid-container">
 
                 <div class="image-area">
-                    <img src="../../../assets/images/chinoise.jpg" alt="realisation image">
+                    <img src="../../../assets/images/fidel.jpg" alt="realisation image">
                 </div>
                 <div class="date-area">
-                    enregistrée le 31/10/2022
+                    <span>enregistrée le 31/10/2022</span>
+                </div>
+                <div class="update-btn-area">
+                    <button><a href="#update">Update</a></button>
+                </div>
+
+            </div>
+
+            <div class="item-grid-container">
+
+                <div class="image-area">
+                    <img src="../../../assets/images/view.jpg" alt="realisation image">
+                </div>
+                <div class="date-area">
+                    <span>enregistrée le 31/10/2022</span>
+                </div>
+                <div class="update-btn-area">
+                    <button><a href="#update">Update</a></button>
+                </div>
+
+            </div>
+
+            <div class="item-grid-container">
+
+                <div class="image-area">
+                    <img src="../../../assets/images/miror.jpg" alt="realisation image">
+                </div>
+                <div class="date-area">
+                    <span>enregistrée le 31/10/2022</span>
+                </div>
+                <div class="update-btn-area">
+                    <button><a href="#update">Update</a></button>
+                </div>
+
+            </div>
+
+            <div class="item-grid-container">
+
+                <div class="image-area">
+                    <img src="../../../assets/images/TableauArt.jpg" alt="realisation image">
+                </div>
+                <div class="date-area">
+                    <span>enregistrée le 31/10/2022</span>
                 </div>
                 <div class="update-btn-area">
                     <button><a href="#update">Update</a></button>
@@ -90,7 +138,7 @@
                     <img src="../../../assets/images/chinoise.jpg" alt="realisation image">
                 </div>
                 <div class="date-area">
-                    enregistrée le 31/10/2022
+                    <span>enregistrée le 31/10/2022</span>
                 </div>
                 <div class="update-btn-area">
                     <button><a href="#update">Update</a></button>
@@ -101,52 +149,10 @@
             <div class="item-grid-container">
 
                 <div class="image-area">
-                    <img src="../../../assets/images/chinoise.jpg" alt="realisation image">
+                    <img src="../../../assets/images/satre.jpg" alt="realisation image">
                 </div>
                 <div class="date-area">
-                    enregistrée le 31/10/2022
-                </div>
-                <div class="update-btn-area">
-                    <button><a href="#update">Update</a></button>
-                </div>
-
-            </div>
-
-            <div class="item-grid-container">
-
-                <div class="image-area">
-                    <img src="../../../assets/images/chinoise.jpg" alt="realisation image">
-                </div>
-                <div class="date-area">
-                    enregistrée le 31/10/2022
-                </div>
-                <div class="update-btn-area">
-                    <button><a href="#update">Update</a></button>
-                </div>
-
-            </div>
-
-            <div class="item-grid-container">
-
-                <div class="image-area">
-                    <img src="../../../assets/images/chinoise.jpg" alt="realisation image">
-                </div>
-                <div class="date-area">
-                    enregistrée le 31/10/2022
-                </div>
-                <div class="update-btn-area">
-                    <button><a href="#update">Update</a></button>
-                </div>
-
-            </div>
-
-            <div class="item-grid-container">
-
-                <div class="image-area">
-                    <img src="../../../assets/images/chinoise.jpg" alt="realisation image">
-                </div>
-                <div class="date-area">
-                    enregistrée le 31/10/2022
+                    <span>enregistrée le 31/10/2022</span>
                 </div>
                 <div class="update-btn-area">
                     <button><a href="#update">Update</a></button>

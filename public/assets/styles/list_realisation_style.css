@@ -21,7 +21,8 @@ body{
 
 .container .grid-container .item-grid-container{
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 90% 10%;
     background-color: #ffff005d;
     justify-content: center;
     border-radius: 15px;

@@ -9,7 +9,7 @@
     <title>Realisation registment</title>
 </head>
 <body>
-    
+
     <div class="navbar">
         <div class="navbar_content">
             <a href="../../index.html"> 
@@ -56,7 +56,11 @@
 
     <div class="container">
 
-        <form action="">
+        <?php
+            include "../../../../private/database/access_db.php"
+        ?>
+
+        <form action="POST">
 
             <div class="header_form">
                 <span>Realisation registment</span>
