@@ -56,20 +56,47 @@
 
     <div class="container">
 
-        <?php
-            include "../../../../private/database/access_db.php"
-        ?>
+        <div class="title-container"><span>My realisations<span></div>
         
         <div class="grid-container">
 
-            <div class="item-grid-container">
+            <?php
+                include "../../../../private/database/access_db.php";
+
+                $requete = "SELECT id, title, image_url, price, registed_date, id_artist, is_active FROM realisations";
+
+                $res = $pdo -> query($requete);
+
+                $target_dir = "../../../assets/images/created_realisations/";
+
+                while($row = $res -> fetch()){
+
+                    $target_file = $target_dir . $row["image_url"];
+
+                     echo "<div class=\"item-grid-container\">
+                            <div class=\"title-area\"><span>" . $row["title"] . "</span></div>
+                            <div class=\"image-area\"><img src=$target_file alt='realisation image'></div>
+                            <div class=\"spec-area\">
+                                <span><span>" . $row["price"] . " FCFA</span></span>
+                                <span>registed the : <span>" . $row["registed_date"] . "</span></span>
+                            </div>
+                            <div class=\"update-btn-area\">
+                                <button><a href=\"./update.php\">Update</a></button>
+                            </div>
+                        </div>";
+                }
+
+            ?>
+
+            <!-- <div class='item-grid-container'>
 
                 <div class="title-area"><span>Mon titre</span></div>
                 <div class="image-area">
                     <img src="../../../assets/images/chinoise.jpg" alt="realisation image">
                 </div>
-                <div class="date-area">
-                    <span>enregistrée le 31/10/2022</span>
+                <div class="spec-area">
+                    <span><span>10000000000000000 FCFA</span></span>
+                    <span>registed the : <span>31/10/2022</span></span>
                 </div>
                 <div class="update-btn-area">
                     <button><a href="#update">Update</a></button>
@@ -83,8 +110,9 @@
                 <div class="image-area">
                     <img src="../../../assets/images/fidel.jpg" alt="realisation image">
                 </div>
-                <div class="date-area">
-                    <span>enregistrée le 31/10/2022</span>
+                <div class="spec-area">
+                    <span><span>10000000000000000 FCFA</span></span>
+                    <span>registed the : <span>31/10/2022</span></span>
                 </div>
                 <div class="update-btn-area">
                     <button><a href="#update">Update</a></button>
@@ -98,8 +126,9 @@
                 <div class="image-area">
                     <img src="../../../assets/images/view.jpg" alt="realisation image">
                 </div>
-                <div class="date-area">
-                    <span>enregistrée le 31/10/2022</span>
+                <div class="spec-area">
+                    <span><span>10000000000000000 FCFA</span></span>
+                    <span>registed the : <span>31/10/2022</span></span>
                 </div>
                 <div class="update-btn-area">
                     <button><a href="#update">Update</a></button>
@@ -113,8 +142,9 @@
                 <div class="image-area">
                     <img src="../../../assets/images/miror.jpg" alt="realisation image">
                 </div>
-                <div class="date-area">
-                    <span>enregistrée le 31/10/2022</span>
+                <div class="spec-area">
+                    <span><span>10000000000000000 FCFA</span></span>
+                    <span>registed the : <span>31/10/2022</span></span>
                 </div>
                 <div class="update-btn-area">
                     <button><a href="#update">Update</a></button>
@@ -128,8 +158,9 @@
                 <div class="image-area">
                     <img src="../../../assets/images/TableauArt.jpg" alt="realisation image">
                 </div>
-                <div class="date-area">
-                    <span>enregistrée le 31/10/2022</span>
+                <div class="spec-area">
+                    <span><span>10000000000000000 FCFA</span></span>
+                    <span>registed the : <span>31/10/2022</span></span>
                 </div>
                 <div class="update-btn-area">
                     <button><a href="#update">Update</a></button>
@@ -143,8 +174,9 @@
                 <div class="image-area">
                     <img src="../../../assets/images/chinoise.jpg" alt="realisation image">
                 </div>
-                <div class="date-area">
-                    <span>enregistrée le 31/10/2022</span>
+                <div class="spec-area">
+                    <span><span>10000000000000000 FCFA</span></span>
+                    <span>registed the : <span>31/10/2022</span></span>
                 </div>
                 <div class="update-btn-area">
                     <button><a href="#update">Update</a></button>
@@ -158,14 +190,15 @@
                 <div class="image-area">
                     <img src="../../../assets/images/satre.jpg" alt="realisation image">
                 </div>
-                <div class="date-area">
-                    <span>enregistrée le 31/10/2022</span>
+                <div class="spec-area">
+                    <span><span>10000000000000000 FCFA</span></span>
+                    <span>registed the : <span>31/10/2022</span></span>
                 </div>
                 <div class="update-btn-area">
                     <button><a href="#update">Update</a></button>
                 </div>
 
-            </div>
+            </div> -->
 
         </div>
     </div>
