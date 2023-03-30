@@ -1,3 +1,29 @@
+
+<?php
+            // include ("../../../../private/database/access_db.php");
+
+
+            // if(isset($_POST["register_btn"]) && isset($_FILES["upload_file"])){
+                
+            //     echo "<pre>";
+            //     print_r($_FILES["upload_file"]);
+            //     echo "</pre>";
+
+                // $title = $_POST["title"];
+                // $price = $_POST["price"];
+                // //$request = "INSERT INTO realisations(title, price, image_url, id_artist, registed_date) VALUES(?, ?, ?, 1, CURRENT_DATE)";
+
+                // $statement = $pdo -> prepare("INSERT INTO realisations(title, price, image_url, id_artist, registed_date) VALUES(?, ?, ?, 1, CURRENT_DATE)");
+
+                // $res = $statement -> execute([$title, $price, $filename]);
+
+                // if($res){
+                //     move_uploaded_file($_FILES['upload_file']['temp_name'], "../../../assets/images/$filename");
+                // }
+        
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,12 +81,9 @@
     </div>
 
     <div class="container">
+        
 
-        <?php
-            include "../../../../private/database/access_db.php"
-        ?>
-
-        <form action="POST">
+        <form action="../../../../private/services/traitement.php">
 
             <div class="header_form">
                 <span>Realisation registment</span>
@@ -81,7 +104,7 @@
             </div>
 
             <div class="footer_form">
-                <button type="submit" name="register_btn">Register</button>
+                <input type="submit" name="register_btn" value="Register"/>
             </div>
 
         </form>

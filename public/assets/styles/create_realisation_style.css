@@ -104,7 +104,7 @@
     height: 8%;
 }
 
-.container form .footer_form button{
+.container form .footer_form input{
     border: none;
     background-color: #4fb0ff;
     width: 25%;
@@ -114,6 +114,6 @@
     border-radius: 15px;
 }
 
-.container form .footer_form button:hover{
+.container form .footer_form input:hover{
     background-color: #4188c2;
 }
