@@ -41,7 +41,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 25%;
+    width: 26%;
     height: 50%;
 }
 
@@ -64,12 +64,21 @@
     color: #ff0000;
 }
 
-.container form .body_form .image_area .upload_file::-webkit-file-upload-button {
+.container form .body_form .image_area .upload_file_create::before {
+    content: 'Select your realisation image';
+}
+
+.container form .body_form .image_area .upload_file_update::before {
+    content: 'Change your realisation image';
+}
+
+.container form .body_form .image_area .upload_file_create::-webkit-file-upload-button,
+.container form .body_form .image_area .upload_file_update::-webkit-file-upload-button {
     visibility: hidden;
 }
 
-.container form .body_form .image_area .upload_file::before {
-    content: 'Select your realisation image';
+.container form .body_form .image_area .upload_file_create::before,
+.container form .body_form .image_area .upload_file_update::before {
     outline: none;
     white-space: nowrap;
     background-color: #4fb0ff;
@@ -82,7 +91,8 @@
     font-size: 15px;
 }
 
-.container form .body_form .image_area .upload_file:hover::before{
+.container form .body_form .image_area .upload_file_create:hover::before,
+.container form .body_form .image_area .upload_file_update:hover::before {
     background-color:  #4188c2;
 }
 
