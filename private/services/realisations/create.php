@@ -10,7 +10,7 @@
                 $title = $_POST["title"];
                 $price = $_POST["price"];
 
-                $target_dir = "../../../assets/images/created_realisations/";
+                $target_dir = "../../../public/assets/images/created_realisations/";
                 $filename = basename($_FILES["upload_file"]["name"]);
                 $target_file = $target_dir . $filename;
                 $imageFileType = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
@@ -31,5 +31,5 @@
                     } 
                 }
             }
-    header("location:../../../public/views/artists/realisation/create.php");
+    header("location:../../../public/views/artists/realisation/list.php");
 ?>
