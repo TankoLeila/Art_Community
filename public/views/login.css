@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    font-size: 20px;
+    background-color: rgba(245, 241, 241, 0.694);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    scroll-padding-top: 7em;
+    scroll-behavior: smooth;
+}
+
+form{
+    position : relative;
+    width: 20%;
+    height: 40%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    box-shadow: 0.1px 0.6px black;
+    color: #4499de;
+    align-items: center;
+    
+}
+
+.logBody{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 30%;
+    justify-content: space-between;
+}
+
+.inputEmail{
+    font-size: 15px;
+    outline: none;
+    border-width: 0;
+    border-bottom-width: 1px;
+   
+}
+
+.inputPwd{
+    font-size: 15px;
+    outline: none;
+    border-width: 0;
+    border-bottom-width: 1px;
+   
+}
+
+.inputEmail::placeholder{
+    color: #999
+}
+
+.btnValid{
+    background-color: #4499de;
+    color: white;
+    margin-top: 15%;
+    border-width: 0;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 15px;
+}
+
+.btnSubmit:hover{
+    box-shadow: 3px 5px 15px rgb(0, 0, 0);
+	transform: translateY(-5px);
+}
+
+.btnValid:hover{
+    box-shadow: 3px 5px 15px rgb(0, 0, 0);
+	transform: translateY(-5px);
+}
