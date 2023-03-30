@@ -64,6 +64,7 @@
 
             <div class="item-grid-container">
 
+                <div class="title-area"><span>Mon titre</span></div>
                 <div class="image-area">
                     <img src="../../../assets/images/chinoise.jpg" alt="realisation image">
                 </div>
@@ -77,7 +78,8 @@
             </div>
 
             <div class="item-grid-container">
-
+                
+                <div class="title-area"><span>Mon titre</span></div>
                 <div class="image-area">
                     <img src="../../../assets/images/fidel.jpg" alt="realisation image">
                 </div>
@@ -91,7 +93,8 @@
             </div>
 
             <div class="item-grid-container">
-
+                
+                <div class="title-area"><span>Mon titre</span></div>
                 <div class="image-area">
                     <img src="../../../assets/images/view.jpg" alt="realisation image">
                 </div>
@@ -105,7 +108,8 @@
             </div>
 
             <div class="item-grid-container">
-
+                
+                <div class="title-area"><span>Mon titre</span></div>
                 <div class="image-area">
                     <img src="../../../assets/images/miror.jpg" alt="realisation image">
                 </div>
@@ -119,7 +123,8 @@
             </div>
 
             <div class="item-grid-container">
-
+                
+                <div class="title-area"><span>Mon titre</span></div>
                 <div class="image-area">
                     <img src="../../../assets/images/TableauArt.jpg" alt="realisation image">
                 </div>
@@ -133,7 +138,8 @@
             </div>
 
             <div class="item-grid-container">
-
+                
+                <div class="title-area"><span>Mon titre</span></div>
                 <div class="image-area">
                     <img src="../../../assets/images/chinoise.jpg" alt="realisation image">
                 </div>
@@ -147,7 +153,8 @@
             </div>
 
             <div class="item-grid-container">
-
+                
+                <div class="title-area"><span>Mon titre</span></div>
                 <div class="image-area">
                     <img src="../../../assets/images/satre.jpg" alt="realisation image">
                 </div>

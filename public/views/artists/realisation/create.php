@@ -1,29 +1,3 @@
-
-<?php
-            // include ("../../../../private/database/access_db.php");
-
-
-            // if(isset($_POST["register_btn"]) && isset($_FILES["upload_file"])){
-                
-            //     echo "<pre>";
-            //     print_r($_FILES["upload_file"]);
-            //     echo "</pre>";
-
-                // $title = $_POST["title"];
-                // $price = $_POST["price"];
-                // //$request = "INSERT INTO realisations(title, price, image_url, id_artist, registed_date) VALUES(?, ?, ?, 1, CURRENT_DATE)";
-
-                // $statement = $pdo -> prepare("INSERT INTO realisations(title, price, image_url, id_artist, registed_date) VALUES(?, ?, ?, 1, CURRENT_DATE)");
-
-                // $res = $statement -> execute([$title, $price, $filename]);
-
-                // if($res){
-                //     move_uploaded_file($_FILES['upload_file']['temp_name'], "../../../assets/images/$filename");
-                // }
-        
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -83,7 +57,7 @@
     <div class="container">
         
 
-        <form action="../../../../private/services/traitement.php">
+        <form method="POST" enctype="multipart/form-data" action="../../../../private/services/realisations/create.php">
 
             <div class="header_form">
                 <span>Realisation registment</span>
@@ -93,7 +67,8 @@
 
                 <div class="image_area">
                     <div class="image_input"><img id="output" alt="realisation image"/></div>
-                    <input type="file" name="upload_file" class="upload_file" onchange="loadFile(event)"/>
+                    <span name="err_message"></span>
+                    <input type="file" name="upload_file" accept="image/*" class="upload_file" onchange="loadFile(event)"/>
                 </div>
 
                 <div class="textfield_area">

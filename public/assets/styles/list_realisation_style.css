@@ -13,7 +13,7 @@ body{
     position: relative;
     width: 100%;
     display: grid;
-    grid-template-columns: 30% 30% 30%;
+    grid-template-columns: 25% 25% 25%;
     gap: 20px;
     justify-content: center;
     padding: 15px 0;
@@ -21,7 +21,7 @@ body{
 
 .container .grid-container .item-grid-container{
     display: grid;
-    grid-template-columns: 80% 20%;
+    grid-template-columns: 20% 60% 20%;
     grid-template-rows: 90% 10%;
     background-color: #ffff005d;
     justify-content: center;
@@ -29,8 +29,15 @@ body{
     box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
 }
 
+.container .grid-container .item-grid-container .title-area,
 .container .grid-container .item-grid-container .image-area{
     grid-column: 1 / span 2;
+}
+
+.container .grid-container .item-grid-container .title-area{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .container .grid-container .item-grid-container .image-area img{
