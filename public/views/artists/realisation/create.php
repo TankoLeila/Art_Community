@@ -68,7 +68,7 @@
                 <div class="image_area">
                     <div class="image_input"><img id="output" alt="realisation image"/></div>
                     <span name="err_message"></span>
-                    <input type="file" name="upload_file" accept="image/*" class="upload_file" onchange="loadFile(event)"/>
+                    <input type="file" name="upload_file" accept="image/*" class="upload_file_create" onchange="loadFile(event)"/>
                 </div>
 
                 <div class="textfield_area">
