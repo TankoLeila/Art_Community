@@ -81,7 +81,7 @@
                                 <span>registed the : <span>" . $row["registed_date"] . "</span></span>
                             </div>
                             <div class=\"update-btn-area\">
-                                <button><a href=\"./update.php\">Update</a></button>
+                                <button><a href=\"./update.php?id=" . $row["id"] . ";\">Update</a></button>
                             </div>
                         </div>";
                 }

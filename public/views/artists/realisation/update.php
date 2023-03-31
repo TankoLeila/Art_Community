@@ -1,3 +1,57 @@
+
+<?php
+            include ("../../../../private/database/access_db.php");
+
+            $id_realisation = $_GET["id"];
+
+            $request = "SELECT title, price, image_url FROM realisations WHERE id = $id_realisation";
+
+            $result = $pdo -> query($request);
+
+            $row = $result -> fetch(); 
+
+            $target_dir = "../../../assets/images/created_realisations/";
+
+            $filename = $row["image_url"];
+
+            $target_file = $target_dir . $filename;
+
+            if( isset($_POST["id_realisation"])&&
+                isset($_POST["update_btn"])
+            ){
+
+                $title = $_POST["title"];
+                $price = $_POST["price"];
+
+                if($_FILES["upload_file"]["error"] == 0){
+                    $target_dir = "../../../assets/images/created_realisations/";
+                    // if(!isset($_FILES["upload_file"]["name"])){
+                         $filename = basename($_FILES["upload_file"]["name"]);
+                    // }
+                    $target_file = $target_dir . $filename;
+                    $imageFileType = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
+                    $allowed_extention = array("jpg", "png", "jfif", "gif");
+                    //$request = "INSERT INTO realisations(title, price, image_url, id_artist, registed_date) VALUES(?, ?, ?, 1, CURRENT_DATE)";
+                    if(!in_array($imageFileType, $allowed_extention)) {
+                        $_POST["err_message"] = "Seuls les fichiers JPG, JFIF, PNG et GIF sont acceptés";
+                    } else {
+                        if(!file_exists($target_file)){
+                            move_uploaded_file(
+                                $_FILES["upload_file"]["tmp_name"], 
+                                $target_file
+                            );
+                        } 
+                    }
+                }
+                
+                $statement = $pdo -> prepare("UPDATE realisations SET title='$title', price=$price, image_url='$filename' WHERE id=$id_realisation");
+
+                $resu = $statement -> execute();
+
+                header("location:list.php");
+            }
+        ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,9 +109,9 @@
     </div>
 
     <div class="container">
-        
 
-        <form method="POST" enctype="multipart/form-data" action="../../../../private/services/realisations/create.php">
+        
+        <form method="POST" enctype="multipart/form-data">
 
             <div class="header_form">
                 <span>Realisation update</span>
@@ -66,14 +120,15 @@
             <div class="body_form">
 
                 <div class="image_area">
-                    <div class="image_input"><img id="output" alt="realisation image"/></div>
+                    <div class="image_input"><img id="output" src=<?php echo $target_file ; ?> alt="realisation image"/></div>
                     <span name="err_message"></span>
                     <input type="file" name="upload_file" accept="image/*" class="upload_file_update" onchange="loadFile(event)"/>
                 </div>
 
                 <div class="textfield_area">
-                    <input type="text" name="title" class="input_text" placeholder="Enter a title"/>
-                    <input type="number" name="price" step="0.01" class="input_text" placeholder="Enter a price"/>
+                    <input type="hidden" name="id_realisation" value=<?php echo $id_realisation; ?>/>
+                    <input type="text" name="title" class="input_text" value=<?php echo  $row["title"]; ?> placeholder="Enter a title"/>
+                    <input type="number" name="price" step="0.01" class="input_text" value=<?php echo $row["price"] ?> placeholder="Enter a price"/>
                 </div>
 
             </div>
