@@ -8,6 +8,7 @@
             ){
 
                 $title = $_POST["title"];
+                $categorie = $_POST["categorie_selection"];
                 $price = $_POST["price"];
 
                 $target_dir = "../../../public/assets/images/created_realisations/";
@@ -19,9 +20,9 @@
                 if(!in_array($imageFileType, $allowed_extention)) {
                     $_POST["err_message"] = "Seuls les fichiers JPG, JFIF, PNG et GIF sont acceptés";
                 } else {
-                    $statement = $pdo -> prepare("INSERT INTO realisations(title, price, image_url, id_artist, registed_date) VALUES(?, ?, ?, 1, CURRENT_DATE)");
+                    $statement = $pdo -> prepare("INSERT INTO realisations(title, price, image_url, id_artist, id_categorie,registed_date) VALUES(?, ?, ?, 1, ?, CURRENT_DATE)");
 
-                    $res = $statement -> execute([$title, $price, $filename]);
+                    $res = $statement -> execute([$title, $price, $filename, $categorie]);
 
                     if($res && !file_exists($target_file)){
                         move_uploaded_file(
