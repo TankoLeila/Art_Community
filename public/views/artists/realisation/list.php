@@ -63,7 +63,7 @@
             <?php
                 include "../../../../private/database/access_db.php";
 
-                $requete = "SELECT id, title, image_url, price, registed_date, id_artist, is_active FROM realisations";
+                $requete = "SELECT rea.id, title, image_url, price, registed_date, id_artist, cat.name FROM realisations rea JOIN categories cat ON (rea.id_categorie = cat.id) WHERE rea.is_active = 1 AND cat.is_active = 1";
 
                 $res = $pdo -> query($requete);
 
@@ -75,7 +75,10 @@
 
                      echo "<div class=\"item-grid-container\">
                             <div class=\"title-area\"><span>" . $row["title"] . "</span></div>
-                            <div class=\"image-area\"><img src=$target_file alt='realisation image'></div>
+                            <div class=\"image-area\">
+                                <img src=$target_file alt='realisation image'>
+                            </div>
+                            <div class=\"categorie_name\"><span>". $row["name"] . "</span></div>
                             <div class=\"spec-area\">
                                 <span><span>" . $row["price"] . " FCFA</span></span>
                                 <span>registed the : <span>" . $row["registed_date"] . "</span></span>
@@ -88,12 +91,13 @@
 
             ?>
 
-            <!-- <div class='item-grid-container'>
+            <!--<div class='item-grid-container'>
 
                 <div class="title-area"><span>Mon titre</span></div>
                 <div class="image-area">
                     <img src="../../../assets/images/chinoise.jpg" alt="realisation image">
                 </div>
+                <div class="categorie_name"><span>Tableau</span></div>
                 <div class="spec-area">
                     <span><span>10000000000000000 FCFA</span></span>
                     <span>registed the : <span>31/10/2022</span></span>

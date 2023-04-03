@@ -56,6 +56,11 @@
 
     <div class="container">
         
+        <?php
+            include "../../../../private/database/access_db.php";
+            $query = "SELECT id, name FROM categories WHERE is_active = 1";
+            $result = $pdo -> query($query);
+        ?>
 
         <form method="POST" enctype="multipart/form-data" action="../../../../private/services/realisations/create.php">
 
@@ -73,6 +78,13 @@
 
                 <div class="textfield_area">
                     <input type="text" name="title" class="input_text" placeholder="Enter a title"/>
+                    <select name="categorie_selection" class="input_text">
+                        <?php
+                            while($row = $result -> fetch()){
+                                echo "<option value=" . $row["id"] . ">" . $row["name"] . "</option>";
+                            }
+                        ?>
+                    </select>
                     <input type="number" name="price" step="0.01" class="input_text" placeholder="Enter a price"/>
                 </div>
 
